@@ -4,7 +4,7 @@ import { getAuthToken, setAuthToken } from "../../Auth/Auth";
 
 export function register(newUser) {
     return async function (dispatch) {
-        const response = await axios.post("http://localhost:3001/api/register", newUser);
+        const response = await axios.post("/register", newUser);
 
         dispatch({
             type: 'REGISTER',
@@ -19,7 +19,7 @@ export function login(formData) {
     // console.log("la data", formData)
     return async function (dispatch) {
         try {
-            const responseLogin = await axios.post("http://localhost:3001/api/login", formData)
+            const responseLogin = await axios.post("/login", formData)
             const token = responseLogin.data.token;
             console.log(responseLogin)
 
@@ -65,7 +65,7 @@ export function addCarProduct (productId, quantity){
                 quantity: quantity,
               };
             console.log("Encabezados de la solicitud:", config.headers);
-            const response = await axios.post("http://localhost:3001/api/car",data,config)
+            const response = await axios.post("/car",data,config)
             return dispatch({
                 type: 'POST_CART',
                 payload:response.data
@@ -88,7 +88,7 @@ export function getAllCartProducts() {
                     'Authorization': `Bearer ${token}`,
                 },
             };
-        const responseCart = await axios.get('http://localhost:3001/api/car/all',config);
+        const responseCart = await axios.get('/car/all',config);
         console.log("soy el productto del carrito ",responseCart)
         return dispatch({
           type: 'GET_CART_PRODUCT',
@@ -104,7 +104,7 @@ export function getAllCartProducts() {
 export function allBanner() {
     return async function (dispatch) {
         try {
-            const response = await axios.get("http://localhost:3001/api/banners/all")
+            const response = await axios.get("/banners/all")
             console.log("imagenes del banner ", response)
             return dispatch({
                 type: 'GET_BANNERS',
@@ -120,7 +120,7 @@ export function allBanner() {
 export function getAllProduct() {
     return async function (dispatch) {
         try {
-            const response = await axios.get('http://localhost:3001/api/user/allProducts')
+            const response = await axios.get('/user/allProducts')
             console.log(response)
             // Organizar por orden alfabético
             // console.log(response)
@@ -158,7 +158,7 @@ export function getAllCategories() {
 
             // Configura los encabezados de la solicitud con el token
 
-            const categori = await axios.get("http://localhost:3001/api/user/categorias");
+            const categori = await axios.get("/user/categorias");
             // console.log("Respuesta de la API:", categori.data);
             return dispatch({
                 type: 'ALL_USER_CATEGORIES',
@@ -186,7 +186,7 @@ export function createBanner(newBanner){
                     'Authorization': `Bearer ${token}`,
                 },
             };
-            const baner = await axios.post("http://localhost:3001/api/banners",newBanner,config);
+            const baner = await axios.post("/banners",newBanner,config);
             dispatch({
                 type:"CREATE_BANNER",
                 payload:baner.data
@@ -208,7 +208,7 @@ export function deleteBanner(id){
                     'Authorization': `Bearer ${token}`,
                 },
             };
-            const baner = await axios.delete(`http://localhost:3001/api/banners/${id}`,config)
+            const baner = await axios.delete(`/banners/${id}`,config)
             dispatch({
                 type:'DELETE_BANNER',
                 payload:baner.data
@@ -230,7 +230,7 @@ export function updateBanner(id,newData){
                     'Authorization': `Bearer ${token}`,
                 },
             };
-            const banerUpdate = await axios.put(`http://localhost:3001/api/banners/${id}`,newData,config)
+            const banerUpdate = await axios.put(`/banners/${id}`,newData,config)
             dispatch({
                 type:'UPDATE_BANNER',
                 payload:banerUpdate.data
@@ -255,7 +255,7 @@ export function crateProduct(newProduct) {
                     'Authorization': `Bearer ${token}`,
                 },
             };
-            const json = await axios.post("http://localhost:3001/api/create", newProduct, config)
+            const json = await axios.post("/create", newProduct, config)
             console.log("Hola soy el producto a guardar ", newProduct)
             dispatch({
                 type: 'POST_PRODUCT',
@@ -283,7 +283,7 @@ export function createTipeProduct(newTipe) {
                     'Authorization': `Bearer ${token}`,
                 },
             };
-            const tipeProduct = await axios.post("http://localhost:3001/api/createTipe", newTipe, config);
+            const tipeProduct = await axios.post("/createTipe", newTipe, config);
             console.log("hola soy el tipo de producto", tipeProduct)
             dispatch({
                 type: 'TYPE_PRODUCTS',
@@ -309,7 +309,7 @@ export function updateCategori(id,data){
                     'Authorization': `Bearer ${token}`,
                 },
             };
-            const categoriUpdate = await axios.put(`http://localhost:3001/api/update/tipe/${id}`,data,config)
+            const categoriUpdate = await axios.put(`/update/tipe/${id}`,data,config)
             
             dispatch({
                 type:'UPDATE_CATEGORI',
@@ -332,7 +332,7 @@ export function deletecategory (id){
                     'Authorization': `Bearer ${token}`,
                 },
             };
-            const responseCategori= await axios.delete(`http://localhost:3001/api/delete/tipe/${id}`,config)
+            const responseCategori= await axios.delete(`/delete/tipe/${id}`,config)
             dispatch({
                 type:'DELETE_CATEGORI',
                 action:responseCategori.data
@@ -358,7 +358,7 @@ export function updateProduct(id,data) {
                 },
             };
             console.log("ID",id)
-            const productUpdate = await axios.put(`http://localhost:3001/api/update/${id}`,data, config)
+            const productUpdate = await axios.put(`/update/${id}`,data, config)
             console.log(productUpdate)
             dispatch({
 
@@ -385,7 +385,7 @@ export function deleteProduct(id) {
                     'Authorization': `Bearer ${token}`,
                 },
             };
-            await axios.delete(`http://localhost:3001/api/delete/${id}`, config)
+            await axios.delete(`/delete/${id}`, config)
 
             dispatch({
                 type: "DELETE_PRODUCT",
@@ -411,7 +411,7 @@ export function allCategories() {
                     'Authorization': `Bearer ${token}`,
                 },
             };
-            const response = await axios.get("http://localhost:3001/api/all/tipes", config);
+            const response = await axios.get("/all/tipes", config);
             dispatch({
                 type: 'ALL_CATEGORIES',
                 payload: response.data
@@ -427,7 +427,7 @@ export function allCategories() {
 export function getDetailProduct (id){
     return async function(dispatch){
         try {
-            const detail = await axios.get(`http://localhost:3001/api/product/${id}`)
+            const detail = await axios.get(`/product/${id}`)
             dispatch({
                 type: 'GET_DETAIL',
                 payload:detail.data
@@ -451,7 +451,7 @@ export function allUserAdmin() {
                     'Authorization': `Bearer ${token}`,
                 },
             };
-            const response = await axios.get("http://localhost:3001/api/all/admin/user", config);
+            const response = await axios.get("/all/admin/user", config);
             dispatch({
                 type: 'ALL_USER',
                 payload: response.data
