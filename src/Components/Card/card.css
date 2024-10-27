@@ -1,0 +1,91 @@
+/* Contenedor principal de la tarjeta */
+.card-product {
+  border: 1px solid rgba(198, 196, 196, 0.459);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 15px;
+  margin: 10px auto;
+  max-width: 90%;
+  width: 300px;
+  height: 480px;
+  background-color: #e6e6fa; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Estilo para el hover */
+.card-product:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para la imagen */
+.card-img-top {
+  width: 100%;
+  height: 300px; /* Establece un alto fijo para las imágenes */
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+  background-color: #f9f9f9;
+}
+
+.card-img-top img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen llene el contenedor manteniendo la proporción */
+  border-radius: inherit;
+}
+
+/* Cuerpo de la tarjeta */
+.card-body {
+  padding: 15px 20px;
+  text-align: center;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* Título del producto */
+.card-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #6a5acd; /* Color violeta para el título */
+  margin-top: 15px;
+  margin-bottom: 10px;
+  text-transform: capitalize; /* Hace que el título del producto sea más legible */
+}
+
+/* Precio del producto */
+.card-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #e74c3c; /* Color rojo para resaltar el precio */
+  margin-bottom: 20px;
+}
+
+/* Botón de compra */
+.btn-buy {
+  background-color: #8e44ad; /* Color violeta para el botón */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  margin-top: 10px; /* Añade un margen superior para separar el botón de otros elementos */
+  margin-bottom: 15px; /* Añade un margen inferior para evitar que el botón toque el borde de la tarjeta */
+}
+
+/* Efecto hover en el botón */
+.btn-buy:hover {
+  background-color: #732d91; /* Tonalidad más oscura */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra extra para dar profundidad */
+}

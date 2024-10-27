@@ -1,0 +1,93 @@
+.menuPaper {
+    padding: 10px;
+
+   
+    background: rgb(199,103,103);
+background: linear-gradient(90deg, rgba(199,103,103,0.39539565826330536) 0%, rgba(81,83,85,0.19091386554621848) 0%);
+    border-radius: 0 0 8px 8px; /* Borde redondeado */
+    box-shadow: 0px 0px 10px rgba(224, 98, 98, 0.1); /* Sombra ligera */
+}
+.menuPaper h5{
+    text-align: center;
+}
+.menuPaper a{
+    margin-left: 10px;
+    font-size: 13px;
+}
+
+.usuariosText{
+    font-size: 5px;
+}
+.product-table th,
+.product-table td,
+.category-table th,
+.category-table td,
+.banner-table th,
+.banner-table td,
+.user-table td {
+    border-radius: 8px 0px 0px 8px;
+    padding: 10px;
+    text-align: left; /* Puedes ajustar esto según tus necesidades (center, left, right) */
+}
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+    
+}
+.product-table tr:hover{
+  
+    background-color: #e0def480;
+}
+.category-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+    
+}
+.category-table tr:hover{
+    background-color: #dee0ff87;
+}
+.banner-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    
+}
+.category-table tr:hover{
+    background-color: #dee0ff87;
+}
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 14px;
+}
+
+.user-table tr:hover {
+    background-color: #dee0ff87; /* Cambia el color a tu preferencia */
+}
+
+/* Estilos para los botones de acción */
+.action-buttons {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+}
+
+.update-button,
+.delete-button {
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 8px;
+    border: none;
+    outline: none;
+    color: #646161;
+    font-weight: bold;
+}
+
+.menu-center{
+    height: 550px;
+    padding: 15px;
+    
+}

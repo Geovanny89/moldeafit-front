@@ -1,0 +1,90 @@
+.footer {
+  background-color: rgba(194, 121, 205, 0.723);
+  padding: 20px;
+}
+.social-section a.facebook-icon {
+  color: #3b5998; /* Azul de Facebook */
+}
+
+.social-section a.instagram-icon {
+  color: #C13584; /* Color de Instagram */
+}
+
+.social-section a.tiktok-icon {
+  color: #69C9EF; /* Color de TikTok */
+}
+.copyright {
+  text-align: center; /* Centra el texto */
+  margin-top: 20px; /* Espacio entre el aviso y los elementos anteriores */
+  color: white; /* Cambia el color según tu diseño */
+  font-size: 14px; /* Ajusta el tamaño de fuente según tus preferencias */
+}
+
+.contact-address-container {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* Permitir que los elementos se envuelvan en pantallas más pequeñas */
+  justify-content: space-evenly;
+}
+
+.contact-section, .address-section {
+  display: flex;
+  flex-direction: column;
+  padding-right: 0; /* Elimina el relleno a la derecha en pantallas pequeñas */
+  color: rgb(33, 32, 32);
+  text-align: left; /* Alinea al centro en pantallas pequeñas */
+}
+
+.contact-section a, .address-section p {
+  text-decoration: none;
+  font-size: 18px;
+  color: rgb(11, 10, 10);
+}
+
+.contact-section h5, .address-section h5 {
+  font-size: 18px;
+  color: rgb(21, 21, 21);
+}
+
+.address-section p {
+  color: white;
+}
+
+.social-section {
+  margin-top: 30px;
+  text-align: center; /* Centrar el texto en la sección de redes sociales */
+}
+
+.social-section h2 {
+  font-size: 24px; /* Tamaño del encabezado "Síguenos" */
+  color: white; /* Color del encabezado */
+  margin-bottom: 15px; /* Espacio entre el encabezado y los iconos */
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center; /* Alinear los iconos al centro */
+  gap: 35px; /* Espacio entre iconos */
+}
+
+.social-section a {
+  font-size: 25px;
+  color: rgb(255, 255, 255);
+}
+
+@keyframes zoomInAndOut {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.social-section a:hover {
+  animation: zoomInAndOut 2s ease;
+}

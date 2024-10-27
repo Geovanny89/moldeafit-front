@@ -1,0 +1,32 @@
+.slider-container{
+    background-color: rgb(196, 196, 218);
+    display: flex;
+  justify-content: center;
+  align-items: center;
+
+    margin: 30px 50px ;
+  
+}
+.paper {
+    
+    align-items: center;
+    
+  
+    width: 100%;
+    height: 350px;
+  }
+  
+  .paper img {
+   
+    width: 100%;
+    height: 350px;
+  }
+
+/* .paper img{
+    display: flex;
+    justify-content: center;
+    border: 2px solid;
+    border-radius: 8px;
+    width: 350px;
+    height: 150px;
+} */

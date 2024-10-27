@@ -1,0 +1,23 @@
+.envios {
+    font-size: 13px;
+    background-color: rgba(0, 0, 0, 0.481);
+    
+}
+.envios h6{
+    background: linear-gradient(to right, #c6d0f5, #89f96a);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+    white-space: nowrap;
+    
+}
+
+@keyframes desplazamiento {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}

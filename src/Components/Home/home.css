@@ -1,0 +1,24 @@
+body {
+  background: linear-gradient(to bottom right, #ff6f81, #9a86fd); /* Degradado de rosa a púrpura */
+
+}
+
+.whatsapp-icon {
+  
+    position: fixed;
+    
+    
+    right: 20px;
+   
+  cursor: pointer;
+  z-index: 1000; 
+  }
+  .whatsapp-icon a{
+   
+    font-size: 40px;
+    
+    color: green;
+  }
+  .whatsapp-icon a:hover{
+    color: rgb(2, 2, 2);
+  }

@@ -1,0 +1,71 @@
+.contenedor-register{
+  background: rgba(179,220,237,1);
+background: -moz-linear-gradient(left, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(179,220,237,1)), color-stop(50%, rgba(41,184,229,1)), color-stop(100%, rgba(188,224,238,1)));
+background: -webkit-linear-gradient(left, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
+background: -o-linear-gradient(left, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
+background: -ms-linear-gradient(left, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
+background: linear-gradient(to right, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee', GradientType=1 );
+    /* background-color: rgb(51, 121, 234); */
+    border: 1px solid rgb(138, 137, 137);
+    border-radius: 8px;
+    margin-top: 15px;
+    height: 630px;
+    
+}
+.contenedor-register form {
+ 
+ margin-top: 5px; 
+
+}
+
+.contenedor-register form .MuiGrid-item {
+  margin-top:-10px;
+  
+}
+.success-alert {
+    margin-top: 15px;
+    background-color: #4caf50;
+    color: #fff;
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  /* Estilos para el mensaje de error */
+  .error-alert {
+    background-color: #f44336;
+    color: #fff;
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .btn-register{
+    
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  .logo-contain {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin-bottom: 20px; 
+  }
+  .logo-contain img {
+   
+    border: 1px solid;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    border: 1px solid white;
+    border-radius: 100px;
+    width: 100px;
+    height: 100px;
+  }

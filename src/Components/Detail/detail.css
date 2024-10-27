@@ -1,0 +1,156 @@
+/* Añade estos estilos a tu archivo CSS o directamente en el componente si estás utilizando styled-components u otro enfoque similar */
+  .detail{
+    box-sizing: border-box;
+    border: 1px solid rgb(219, 215, 215);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    
+    width: 80%;
+    height: 480px;
+    margin-top: 20px;
+   margin-bottom: 20px;
+  }
+.detail a{
+  
+  text-decoration: none;
+  color: black;
+  align-items: center;
+}
+  .thumbnail-container {
+    margin-top: 10px;
+  margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .thumbnail-container img{
+    width: 90%;
+    height: 100px;
+  }
+  .img-center{
+    
+    margin-top: 40px;
+    
+  }
+  .img-center img{
+    border: 1px solid rgba(117, 116, 116, 0.362);
+    border-radius: 8px;
+    max-width: 60%;
+    margin-left: 65px;
+    transition: transform 0.3s; 
+}
+.img-center img:hover {
+  border: 3px solid rgb(216, 218, 217);
+  transform: scale(1.1); /* Aplica un zoom del 10% */
+}
+  .thumbnail {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+  }
+  
+  .thumbnail:hover {
+    border-color: #007bff;
+  }
+  
+  .thumbnail.selected {
+    border-color: #007bff;
+  }
+  
+  .details-info {
+    
+    padding: 10px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 20px;
+    height: 400px;
+  }
+  
+  .details-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .details-info p {
+    margin-bottom: 10px;
+  }
+  
+  .price {
+    font-weight: bold;
+  }
+  
+  .button-container {
+
+    margin-top: 10px;
+    
+  }
+  
+  .button-container button {
+    width: 90%;
+   
+  }
+  .quantity-controls {
+    display: flex;
+    max-width: 50%;
+    font-size: 10px;
+   /* border: 1px solid red; */
+    align-items: center;
+    margin-top: 15px;
+    margin-left: 25px;
+  }
+  
+  .quantity-controls button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #007bff;
+    border-radius: 8px;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  .quantity-controls button:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .quantity-controls span {
+    margin: 0 7px;
+    font-size: 13px;
+    font-weight: bold;
+  }
+  @media (max-width: 768px) {
+    .detail {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+      }
+      .thumbnail-container img{
+        width: 35%;
+        height: 70%;
+      }
+      .thumbnail-container {
+        flex-direction: row;
+        margin: 0; /* Eliminar el margen superior e inferior */
+      }
+    
+      .img-center {
+        margin-top: 20px; /* Eliminar el margen superior */
+      }
+    
+      .details-info {
+        width: 100%;
+        margin-top: 20px;
+      }
+      .button-container button {
+        width: 80%;
+       
+      }
+  }
