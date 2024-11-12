@@ -138,11 +138,14 @@ export default function Dashboard() {
     }
     //ELiminar Categoria
     const handleDeletecategori = (id) => {
-        const confirmDelete = window.confirm("¿Estas seguro que quiere eliminar la PRoducto ?")
+        const confirmDelete = window.confirm("¿Estás seguro de que deseas eliminar la categoría?");
         if (confirmDelete) {
-            dispatch(deletecategory(id))
+            dispatch(deletecategory(id)).then(() => {
+                dispatch(allCategories()); // Recarga todas las categorías
+            });
         }
-    }
+    };
+    
     //crear producto
     const handleCreateProductClick = () => {
         setShowCreateProductForm(true);
@@ -201,7 +204,9 @@ export default function Dashboard() {
     const handleDeleteProduct = (id) => {
         const confirmDelete = window.confirm("¿Estas seguro que quiere eliminar la PRoducto ?")
         if (confirmDelete) {
-            dispatch(deleteProduct(id))
+            dispatch(deleteProduct(id)).then(() => {
+                dispatch(getAllProduct()); // Recarga todos los productos después de eliminar
+            });
         }
     }
     //actualizar producto
@@ -262,7 +267,7 @@ export default function Dashboard() {
             <Grid container item xs={9} md={12}>
                 {/* Menú lateral */}
                 <Grid item xs={9} md={3}>
-                    <Paper className='menuPaper'>
+                <Paper className='menuPaper' style={{ backgroundColor: 'rgba(255, 255, 255, 0.5)' }}>
                         <Typography variant='h5'>Navegación</Typography>
                         <Accordion>
                             <AccordionSummary expandIcon={<ExpandMoreIcon />}>
@@ -327,7 +332,7 @@ export default function Dashboard() {
                                 </Typography>
                             </AccordionDetails>
                         </Accordion>
-                        <Accordion>
+                        {/* <Accordion>
                             <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                                 <Typography>
                                     <PeopleIcon /> Usuarios
@@ -347,8 +352,8 @@ export default function Dashboard() {
                                     </a>
                                 </Typography>
                             </AccordionDetails>
-                        </Accordion>
-                        <Accordion>
+                        </Accordion> */}
+                        {/* <Accordion>
                             <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                                 <Typography>
                                     <AssignmentIcon /> Órdenes
@@ -368,13 +373,13 @@ export default function Dashboard() {
                                     </a>
                                 </Typography>
                             </AccordionDetails>
-                        </Accordion>
+                        </Accordion> */}
                     </Paper>
                 </Grid>
 
                 {/* Contenido principal */}
                 <Grid item xs={12} md={9}>
-                    <Paper className='menu-center'>
+                    <Paper className='menu-center'  style={{ backgroundColor: 'rgba(255, 255, 255, 0.5)' }}>
                         {showCreateBanner && <CreateBanner />}
                         {showViewsBanner && (
                             <div>

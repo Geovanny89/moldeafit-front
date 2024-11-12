@@ -1,22 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom'; // Importar useParams
 import { addCarProduct, getDetailProduct } from '../../Redux/Action';
-import { Container, Row, Col,  Image, Button } from 'react-bootstrap';
-import './detail.css'
+import { Container, Row, Col, Image, Button } from 'react-bootstrap';
+import './detail.css';
 
-export default function Details({ id }) {
+export default function Details() {
+  const { id } = useParams(); // Obtener el id del producto desde la URL
+  console.log( 'imagen id0', id)
   const dispatch = useDispatch();
   const detail = useSelector((state) => state.detail);
   const [selectedImage, setSelectedImage] = useState(0);
-  const [quantity, setQuantity] = useState(1); 
+  const [quantity, setQuantity] = useState(1);
 
   useEffect(() => {
-    dispatch(getDetailProduct(id));
+    dispatch(getDetailProduct(id)); // Despachar la acción para obtener los detalles del producto
   }, [dispatch, id]);
 
   const handleThumbnailClick = (index) => {
     setSelectedImage(index);
   };
+
   const handleIncrement = () => {
     setQuantity(quantity + 1);
   };
@@ -29,12 +33,11 @@ export default function Details({ id }) {
 
   const handleAddToCart = () => {
     // Lógica para agregar el producto al carrito
-    dispatch(addCarProduct(detail._id,quantity))
+    dispatch(addCarProduct(detail._id, quantity));
   };
 
   return (
     <Container className="detail">
-     
       {detail && detail.image && detail.image.length > 0 && (
         <Row>
           <Col md={2}>
@@ -54,14 +57,13 @@ export default function Details({ id }) {
           <Col md={6} className="img-center">
             <Image src={detail.image[selectedImage]} alt={`Selected Image`} fluid />
           </Col>
-          
+
           <Col md={4}>
-          <a href="">Volver</a>
+            <a href="#">Volver</a>
             <div className="details-info">
               <h2>{detail.name}</h2>
               <p className="text-muted">Marca: {detail.brand}</p>
               <p className="text-muted">Descripción: {detail.description}</p>
-              
               <p className="price">Precio: ${detail.price}</p>
               <p>Stock: {detail.stock}</p>
               <div className="quantity-controls">
@@ -69,15 +71,11 @@ export default function Details({ id }) {
                 <span>{quantity}</span>
                 <button onClick={handleIncrement}>+</button>
               </div>
-              
-          <Button variant="secondary" onClick={handleAddToCart}>Agregar a Carrito</Button>
+              <Button variant="secondary" onClick={handleAddToCart}>Agregar a Carrito</Button>
             </div>
           </Col>
-          
         </Row>
-        
       )}
-      
     </Container>
   );
 }

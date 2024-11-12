@@ -9,18 +9,18 @@ export default function Footer() {
     <footer className='footer'>
       <hr />
       <div className='footer-container'>
-        <div className='contact-address-container'>
+        {/* <div className='contact-address-container'>
           <div className='contact-section'>
             <h5>Contáctanos</h5>
             <a href='https://wa.me/message/5IMPIB6OOI6XE1' target='_blank'><FaWhatsapp className='whatsapp-icon' />  +57 312 4433326</a>
-            <a href="mailto:gcasadiegosr13@gmail.com"><FaEnvelope className='email-icon' /> gcasadiegosr13@gmail.com</a>
+            
           </div>
           <div className='address-section'>
             <h5>Dirección: </h5>
             <p>Calle 8b #3n-22 Cúcuta-Norte de Santander</p>
             <p>Trigal del Norte</p>
           </div>
-        </div>
+        </div> */}
 
         
       </div>

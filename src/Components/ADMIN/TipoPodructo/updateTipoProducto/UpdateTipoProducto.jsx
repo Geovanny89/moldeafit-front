@@ -61,7 +61,7 @@ export default function UpdateTipoProducto({id}) {
                     </div>
                     <div className="botones-tipes">
                         <a href="#" onClick={handleSubmit} className="create-link">
-                            Crear
+                            Actualizar
                         </a>
                         <a href="/admin" onClick={handleCancel} className="cancel-link">
                             Cancelar

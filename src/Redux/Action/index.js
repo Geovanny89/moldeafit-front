@@ -255,12 +255,15 @@ export function crateProduct(newProduct) {
                     'Authorization': `Bearer ${token}`,
                 },
             };
+            
             const json = await axios.post("/create", newProduct, config)
+            
             console.log("Hola soy el producto a guardar ", newProduct)
             dispatch({
                 type: 'POST_PRODUCT',
                 payload: json.data
             })
+            console.log(json )
             return json
         } catch (error) {
             console.log(error)
@@ -428,6 +431,7 @@ export function getDetailProduct (id){
     return async function(dispatch){
         try {
             const detail = await axios.get(`/product/${id}`)
+            console.log("soy el detalle ",detail)
             dispatch({
                 type: 'GET_DETAIL',
                 payload:detail.data

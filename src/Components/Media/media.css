@@ -1,12 +1,15 @@
 .media-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centrar el contenido */
-    margin-top: 20px; /* Espacio en la parte superior */
-  }
-  
-  video {
-    border: 2px solid #ccc; /* Borde del video */
-    border-radius: 8px; /* Esquinas redondeadas */
-  }
-  
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se ajusten en múltiples líneas */
+  padding: 35px;
+  margin-top: 20px; /* Espacio en la parte superior */
+  gap: 35px; /* Espacio entre los videos */
+}
+
+video {
+  flex: 1 1 calc(20% - 35px); /* Ajusta el ancho para cinco videos en la misma línea */
+  border: 2px solid #ccc; /* Borde del video */
+  border-radius: 8px; /* Esquinas redondeadas */
+  max-width: 100%; /* Evita que el video exceda el contenedor */
+  height: auto; /* Mantiene la proporción del video */
+}

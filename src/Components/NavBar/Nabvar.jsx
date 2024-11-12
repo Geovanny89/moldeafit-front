@@ -24,7 +24,7 @@ export default function Navbar({setCurrentPage}) {
 }
   return (
     <div className="container text-center mt-7">
-      <Barra/>
+      {/* <Barra/> */}
       <nav className="navbar navbar-expand-lg   " style={{ backgroundColor: "#f7599b" }}>
         <div className="container-fluid">
           <a className="navbar-brand" href="#" ><img src={logo} alt="Img Not Found" width="100px"/></a>

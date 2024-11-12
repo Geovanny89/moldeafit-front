@@ -69,7 +69,7 @@ export default function Home() {
           <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3">
             {currentProducts.map((el, index) => (
               <div key={index} className="col mb-3">
-                <Card name={el.name} description={el.description} image={el.image} price={el.price} stock={el.stock} />
+                <Card name={el.name} description={el.description} image={el.image} price={el.price} stock={el.stock} sise={el.sise} color={el.color} />
               </div>
             ))}
           </div>

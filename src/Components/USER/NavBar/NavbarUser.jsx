@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { FaHome, FaList, FaSignInAlt, FaShoppingCart } from 'react-icons/fa';
-import logo from '../../../Assets/logo-1.jpeg';
+import logo from '../../../Assets/LogoMoldea.png';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { getAllCartProducts, getAllCategories, logout } from '../../../Redux/Action';
@@ -29,7 +29,7 @@ export default function NavbarUser() {
   return (
     <div className="container text-center mt-7">
       <Barra/>
-      <nav className="navbar navbar-expand-lg navbar-light bg-info">
+      <nav className="navbar navbar-expand-lg "style={{ backgroundColor: "#f7599b" }}>
         <div className="container-fluid">
           <a className="navbar-brand" href="#"><img src={logo} alt="Img Not Found" width="100px" /></a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
